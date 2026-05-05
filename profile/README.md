@@ -55,7 +55,7 @@ All applications are built on Python 3.12 + FastAPI + React 18 + Vite + TypeScri
 
 | Repo | Summary |
 |---|---|
-| [gp-system](https://github.com/symphonix-health/gp-system) | England primary care. Prescribing, referrals, results, GP Connect, NHS RBAC. Full CAID/REA artefacts. |
+| [gp-system](https://github.com/symphonix-health/gp-system) | England primary care. Prescribing, referrals, results, GP Connect, national RBAC. Full CAID/REA artefacts. |
 | [community-nursing](https://github.com/symphonix-health/community-nursing) | District nursing: caseload priority, geographic visit planning, wound-care evidence, syringe-driver records, CSDS extracts. |
 | [epaccs](https://github.com/symphonix-health/epaccs) | Electronic Palliative Care Coordination System. ReSPECT v3, ADRT, DNACPR, preferred-place authoring, LPA H&W proxy, consent envelope. |
 | [screening-recall](https://github.com/symphonix-health/screening-recall) | Population screening recall and invitation management. BulletTrain HIE sibling. |
@@ -71,7 +71,7 @@ All applications are built on Python 3.12 + FastAPI + React 18 + Vite + TypeScri
 
 | Repo | Summary |
 |---|---|
-| [pharmacy-system](https://github.com/symphonix-health/pharmacy-system) | Hospital dispense. FHIR MedicationRequest inbound, dispense FSM, CD register (Schedule 2/3), FP10 NHSBSA reimbursement, GPhC validation. |
+| [pharmacy-system](https://github.com/symphonix-health/pharmacy-system) | Hospital dispense. FHIR MedicationRequest inbound, dispense FSM, CD register (Schedule 2/3), FP10 national BSA reimbursement, GPhC validation. |
 | [eps](https://github.com/symphonix-health/eps) | Electronic Prescription Service clinical workflow simulator. BulletTrain HIE sibling. |
 | [etps](https://github.com/symphonix-health/etps) | Electronic Transfer of Prescriptions transport simulator. Wire-pair with `symphonix-eps-ig`. |
 
@@ -108,7 +108,7 @@ All applications are built on Python 3.12 + FastAPI + React 18 + Vite + TypeScri
 | [appointment-system](https://github.com/symphonix-health/appointment-system) | FHIR R4 Slot/Appointment booking. Nexus-A2A JSON-RPC inbound, GHARRA federated discovery, BT notification centre. 500/500 acceptance scenarios. |
 | [provider-portal](https://github.com/symphonix-health/provider-portal) | Clinician + receptionist portal. Write-path into BulletTrain HIE. TOTP MFA, AES-256-GCM at rest, bcrypt ≥12, WCAG 2.2 AAA. |
 | [insurance-eclaims](https://github.com/symphonix-health/insurance-eclaims) | X12 EDI clearinghouse. 837P/I/D, 835, 270/271, 278. AS2/SFTP ingest, deterministic adjudication, CARC+RARC denial management. HIPAA / HITECH. |
-| [erp](https://github.com/symphonix-health/erp) | Healthcare enterprise ERP. GL, AP, AR, Procurement, Inventory, HR, Payroll. Period-close gate, four-eyes approval, multi-currency, NHS GAM / FRS 102 compliance. |
+| [erp](https://github.com/symphonix-health/erp) | Healthcare enterprise ERP. GL, AP, AR, Procurement, Inventory, HR, Payroll. Period-close gate, four-eyes approval, multi-currency, national GAM / FRS 102 compliance. |
 | [supply-chain-erp](https://github.com/symphonix-health/supply-chain-erp) | Hospital supply-chain. Multi-stockroom inventory, allocation FSM, PO automation (X12 850), 3PL integration, cold-chain breach, MHRA/FDA UDI. |
 | [scheduling-gateway](https://github.com/symphonix-health/scheduling-gateway) | Modality router (port 8135). Routes FHIR R4 ServiceRequest referrals between appointment-system and orchestra-telemedicine. |
 | [analytics-bi](https://github.com/symphonix-health/analytics-bi) | Healthcare analytics BI. Star-schema warehouse, ETL from 6 sibling services, embedded dashboards, row-level security, freshness-SLA. |
@@ -128,7 +128,7 @@ All applications are built on Python 3.12 + FastAPI + React 18 + Vite + TypeScri
 |---|---|
 | [symphonix-bridge-sdk](https://github.com/symphonix-health/symphonix-bridge-sdk) | Protocol translation SDK. 12 adapters: FHIR R4, HL7v2, DICOM, X12, CDA, REST, Nexus A2A, MCP, Kafka, gRPC, WebSocket, SSE. CanonicalEnvelope pivot. |
 | [symphonix-emulator-kit](https://github.com/symphonix-health/symphonix-emulator-kit) | External-system emulator framework. Fixture / LLM / proxy backends, `@touchpoint` decorator, coverage reporting. Used by all sibling services. |
-| [symphonix-eps-ig](https://github.com/symphonix-health/symphonix-eps-ig) | FHIR R4 Implementation Guide for EPS. SUSHI profiles, extensions, ValueSets, CapabilityStatements. NHS Digital EPS / IHE Pharm MPD aligned. CC0-1.0. |
+| [symphonix-eps-ig](https://github.com/symphonix-health/symphonix-eps-ig) | FHIR R4 Implementation Guide for EPS. SUSHI profiles, extensions, ValueSets, CapabilityStatements. national Digital EPS / IHE Pharm MPD aligned. CC0-1.0. |
 | [design-system](https://github.com/symphonix-health/design-system) | Brand, visual language, and UI kit. Deep indigo-violet palette, DM Sans, JetBrains Mono, 8-stop rainbow ECG motif. |
 | [symphonix-health.github.io](https://github.com/symphonix-health/symphonix-health.github.io) | Documentation site (Jekyll). Getting started, architecture, Nexus A2A spec, per-product docs. |
 | [symphonix-health-docs](https://github.com/symphonix-health/symphonix-health-docs) | Brand assets, marketing, country pages (🇬🇭 🇰🇪 🇷🇼 🇳🇬 🇬🇧 🇮🇪 🇦🇪), research, strategy. |
@@ -150,7 +150,7 @@ These products share Symphonix ecosystem patterns (port-config, emulator-kit, de
 ## STANDARDS & COMPLIANCE
 
 `FHIR R4` · `HL7 v2` · `DICOM` · `X12 EDI` · `OpenHIE` · `IHE` · `SNOMED CT` · `ICD-10/11` · `LOINC` · `RxNorm` · `dm+d`  
-`DCB0129` · `DCB0160` · `ISO 15189` · `IR(ME)R 2017` · `NHS GAM` · `UK FRS 102` · `SOX` · `HIPAA` · `HITECH`  
+`DCB0129` · `DCB0160` · `ISO 15189` · `IR(ME)R 2017` · `national GAM` · `UK FRS 102` · `SOX` · `HIPAA` · `HITECH`  
 `EU AI Act` · `GDPR` · `Data Protection Act 2019` · `EU MDR 2017/745` · `GDHCN` · `WHO HMIS guidelines`
 
 ---

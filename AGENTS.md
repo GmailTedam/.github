@@ -15,6 +15,29 @@ Then follow `C:\Users\hgeec\github\second-brain-kb\AGENTS.md`.
 
 <!-- second-brain-kb:end -->
 
+## Cross-session handoffs
+
+When one agent session spawns, delegates to, or waits on another session before deciding the next step, do not rely on chat context alone. Use the filesystem as the shared coordination layer.
+
+- Before spawning or delegating, the host session must create or name a handoff file under `C:\Users\hgeec\github\second-brain-kb\knowledge\agent-workflows\state\session-handoffs\`.
+- The host must write the question, dependency, expected output, source repo, and blocking decision into that handoff file.
+- The spawned session must write its outcome, evidence, files changed, commands run, validation result, blockers, and recommended next action into the same file or a clearly linked response file.
+- The host session must read the handoff outcome before continuing work that depends on it.
+- While the dependency is active, the spawned session should update `Status` and `Last updated` immediately when work starts, blocks, completes, or changes recommendation.
+- The host session should reread the handoff immediately before each dependent decision; a missing or stale outcome means the dependency is unresolved.
+- If a spawned session cannot write the handoff file, the host must treat the dependency as unresolved and ask for the missing result rather than guessing.
+- Do not commit ad hoc session handoff files unless the user explicitly asks; they may contain private task context. Commit only the protocol docs and templates.
+
+## New repository onboarding
+
+When a new Git repository is created under `C:\Users\hgeec\github`, onboard it immediately so it participates in global instructions, Claude workflows, and second-brain cross-repo visibility.
+
+- Add or update repo-local `AGENTS.md` with the managed global-workspace pointer to `C:\Users\hgeec\github\AGENTS.md`.
+- Add or update repo-local `CLAUDE.md` with the managed global-workspace pointer to `C:\Users\hgeec\github\CLAUDE.md` and `C:\Users\hgeec\github\AGENTS.md`.
+- Refresh the second-brain workspace repository inventory and wiki map in `C:\Users\hgeec\github\second-brain-kb`.
+- Record the new repo in the `agent-workflows` KB as processed source material.
+- Do this as part of repo creation, before relying on the repo in a spawned session or cross-repo workflow.
+
 ## Anti-AI-writing self-instructions
 
 Source: `https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing`

@@ -38,6 +38,19 @@ When a new Git repository is created under `C:\Users\hgeec\github`, onboard it i
 - Record the new repo in the `agent-workflows` KB as processed source material.
 - Do this as part of repo creation, before relying on the repo in a spawned session or cross-repo workflow.
 
+## Canonical artefact conventions
+
+Four artefact shapes recur across the workspace and are parsed by downstream tooling (the matrix harness, the Seeding Alignment Gate, the journey runner, traceability checks). Author them to match the existing surface rather than inventing a new shape:
+
+1. BulletTrain 14-column functional test or use-case matrix (the `reduced_json_matrices` JSON format).
+2. Requirement IDs and traceability (FR, NFR, REQ-PROMPT, CA-, component- and sibling-scoped IDs, and the requirement to use-case to test RTM).
+3. Real-service integration tests (a BulletTrain cross-system journey `*.scenario.yaml` plus runner, or a single-sibling backend `conftest.py`).
+4. Seed data (a seeder definition, the FastAPI lifespan loader, and the persona-journey reset).
+
+Disambiguation: the 14-column matrix covers functional use cases; the caid-agent 18-column `V2_18COL` matrix covers non-functional requirements (ISO/IEC 25010). Both are correct, one per requirement class.
+
+Reference, with verbatim samples and canonical `path:line` citations: `C:\Users\hgeec\github\CANONICAL_ARTEFACT_SAMPLES_HANDOFF.md`. Claude Code sessions also load this as the global skill `canonical-artefact-conventions` at `C:\Users\hgeec\.claude\skills\canonical-artefact-conventions\`. Agents that cannot load skills should read the handoff doc directly.
+
 ## Anti-AI-writing self-instructions
 
 Source: `https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing`

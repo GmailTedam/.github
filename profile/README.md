@@ -5,12 +5,12 @@
   <br />
   Move clinical and AI data safely, reliably, and at national scale.
   <br /><br />
-  <a href="https://symphonix-health.github.io/docs/system-catalogue"><img alt="System catalogue" src="https://img.shields.io/badge/catalogue-43_repos-14919B?style=flat-square" /></a>
+  <a href="https://github.com/symphonix-health/symphonix-health.github.io/blob/main/docs/system-catalogue.md"><img alt="System catalogue" src="https://img.shields.io/badge/catalogue-43_repos-14919B?style=flat-square" /></a>
   <img alt="Evidence rule" src="https://img.shields.io/badge/evidence-repo_local_proof_required-4F46E5?style=flat-square" />
 </div>
 
 <p align="center">
-  <a href="https://symphonix-health.github.io/docs/system-catalogue">
+  <a href="https://github.com/symphonix-health/symphonix-health.github.io/blob/main/docs/system-catalogue.md">
     <img src="https://raw.githubusercontent.com/symphonix-health/symphonix-health.github.io/main/assets/diagrams/github-org-atlas.svg" alt="Symphonix Health GitHub system atlas" width="100%" />
   </a>
 </p>
